@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Consultation | Tempchin &amp; Bowers, LLC</title>
+<meta name="description" content="Request a consultation with David Guzman, CPA at Tempchin & Bowers, LLC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0f1d2e; --navy-2:#16283d; --navy-3:#1d3550;
+  --white:#ffffff; --gray-50:#f6f7f9; --gray-100:#eef0f3; --gray-200:#dde1e6;
+  --ink:#16212c; --ink-muted:#5c6675;
+  --gold:#a9804c; --gold-dark:#8a6a3c; --gold-pale:#f4ebdc;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--white);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+.container{max-width:1180px;margin:0 auto;padding:0 28px;}
+h1,h2,h3{font-family:'Source Serif 4',serif;font-weight:600;color:var(--navy);letter-spacing:-0.01em;}
+h2{font-size:clamp(24px,3.2vw,30px);margin-bottom:14px;}
+h3{font-size:19px;margin-bottom:8px;}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+.eyebrow::before{content:'';width:16px;height:1px;background:var(--gold);display:inline-block;}
+.lede{color:var(--ink-muted);font-size:16px;max-width:560px;}
+section{padding:88px 0;}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+
+.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--gray-200);}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;height:76px;}
+.logo{display:flex;align-items:center;gap:12px;}
+.logo .mark{width:36px;height:36px;border-radius:50%;background:var(--navy);color:var(--gold-pale);display:flex;align-items:center;justify-content:center;font-family:'Source Serif 4',serif;font-weight:600;font-size:14px;flex-shrink:0;}
+.logo .word{font-family:'Source Serif 4',serif;font-size:15px;color:var(--navy);line-height:1.2;}
+.logo .word small{display:block;font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:0.14em;color:var(--ink-muted);margin-top:2px;font-style:normal;}
+nav.main-nav{display:flex;align-items:center;gap:30px;}
+nav.main-nav a{font-size:13.5px;color:var(--ink-muted);font-weight:500;padding-bottom:4px;border-bottom:2px solid transparent;transition:all .2s;}
+nav.main-nav a:hover{color:var(--navy);}
+nav.main-nav a.active{color:var(--navy);border-bottom-color:var(--gold);}
+.btn{font-family:'Inter',sans-serif;font-weight:600;font-size:13.5px;padding:12px 22px;border-radius:4px;display:inline-block;transition:all .2s;white-space:nowrap;border:1px solid transparent;cursor:pointer;}
+.btn-primary{background:var(--navy);color:#fff;}
+.btn-primary:hover{background:var(--gold-dark);}
+.nav-toggle{display:none;background:none;border:1px solid var(--gray-200);width:40px;height:40px;border-radius:4px;font-size:18px;color:var(--navy);}
+@media (max-width:880px){nav.main-nav{display:none;}.nav-toggle{display:block;}.header-cta{display:none;}}
+
+.page-head{background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:70px 0 56px;}
+.page-head h1{font-size:clamp(28px,4vw,40px);margin-bottom:14px;}
+
+.contact-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:56px;align-items:start;}
+@media (max-width:880px){.contact-grid{grid-template-columns:1fr;}}
+.contact-card{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:8px;padding:32px;}
+.info-row{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid var(--gray-200);font-size:14.5px;}
+.info-row:last-child{border-bottom:none;}
+.info-row .k{color:var(--ink-muted);}
+.info-row .v{color:var(--navy);font-weight:600;text-align:right;}
+
+.slot-list{display:flex;flex-direction:column;gap:10px;margin-top:18px;}
+.slot{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--gray-200);border-radius:6px;padding:14px 18px;background:#fff;font-size:14px;transition:all .2s;}
+.slot:hover{border-color:var(--gold);background:var(--gold-pale);}
+.slot .day{font-weight:600;color:var(--navy);}
+.slot .arrow{color:var(--gold-dark);font-size:13px;}
+
+footer{background:var(--navy);color:#cdd3da;padding:56px 0 28px;}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+@media (max-width:700px){.footer-grid{grid-template-columns:1fr;gap:28px;}}
+footer h4{color:#fff;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-family:'Inter',sans-serif;margin-bottom:16px;}
+footer p{font-size:13.5px;color:#9aa3ad;line-height:1.7;}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+footer a{font-size:13.5px;color:#cdd3da;}
+footer a:hover{color:var(--gold);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;color:#8b95a1;}
+.footer-bottom .credit em{color:var(--gold);font-style:normal;}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <div class="mark">T&amp;B</div>
+      <div class="word">Tempchin &amp; Bowers<small>CERTIFIED PUBLIC ACCOUNTANTS</small></div>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="client-intake.html">Client Intake</a>
+      <a href="book-consultation.html" class="active">Book a Consultation</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="book-consultation.html" class="btn btn-primary header-cta">Book a Consultation</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <div class="eyebrow">Book a Consultation</div>
+    <h1>Let's talk through your situation</h1>
+    <p class="lede">A short consultation gives us a chance to understand where things stand and outline clear next steps, before any work begins.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <h2>What to expect</h2>
+        <p class="lede" style="margin-bottom:30px;">Most consultations run twenty to thirty minutes and can be done by phone, video, or in person at our Silver Spring office. We'll ask a few questions up front so the conversation stays focused on what actually matters for your situation.</p>
+        <div class="eyebrow">Sample Availability</div>
+        <div class="slot-list">
+          <div class="slot"><span class="day">Tuesday, 10:00 AM</span><span class="arrow">&rarr;</span></div>
+          <div class="slot"><span class="day">Wednesday, 1:30 PM</span><span class="arrow">&rarr;</span></div>
+          <div class="slot"><span class="day">Thursday, 9:00 AM</span><span class="arrow">&rarr;</span></div>
+        </div>
+        <p style="margin-top:14px;color:var(--ink-muted);font-size:12.5px;">Live scheduling is being connected. For now, request a time and our team will confirm directly.</p>
+      </div>
+      <div class="contact-card">
+        <h3>Request an Appointment</h3>
+        <p class="lede" style="margin-bottom:22px;">Send a request and David's office will follow up to confirm a time.</p>
+        <a href="mailto:dguzman@tempchinbowers.com?subject=Consultation%20Request&body=Name%3A%0APhone%3A%0APreferred%20day%20and%20time%3A%0ABrief%20description%20of%20what%20you%27d%20like%20to%20discuss%3A%0A" id="request-btn" class="btn btn-primary" style="width:100%;text-align:center;display:block;">Request an Appointment</a>
+        <div class="form-success" id="request-success" style="margin-top:18px;">Your email app should now be open with a pre-filled request. Just hit send, and David's office will follow up to confirm.</div>
+        <div class="info-row" style="margin-top:24px;"><span class="k">Or call</span><span class="v">(301) 585-8404</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:16px;">
+          <div class="mark">T&amp;B</div>
+          <div class="word" style="color:#fff;">Tempchin &amp; Bowers<small style="color:#9aa3ad;">CERTIFIED PUBLIC ACCOUNTANTS</small></div>
+        </div>
+        <p>Boutique CPA services for individuals and small businesses across Silver Spring and the greater Washington, D.C. metro area.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="client-intake.html">Client Intake</a></li>
+          <li><a href="book-consultation.html">Book a Consultation</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+13015858404">(301) 585-8404</a></li>
+          <li><a href="mailto:dguzman@tempchinbowers.com">dguzman@tempchinbowers.com</a></li>
+          <li>8737 Colesville Rd, Suite 1101<br>Silver Spring, MD 20910</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Tempchin &amp; Bowers, LLC. All rights reserved.</p>
+      <p class="credit">Designed &amp; built by <em>A&iuml;mplify</em></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const toggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.main-nav');
+if (toggle) {
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.style.display === 'flex';
+    nav.style.display = isOpen ? 'none' : 'flex';
+    nav.style.flexDirection = 'column';
+    nav.style.position = 'absolute';
+    nav.style.top = '76px';
+    nav.style.right = '28px';
+    nav.style.left = '28px';
+    nav.style.background = '#fff';
+    nav.style.border = '1px solid #dde1e6';
+    nav.style.borderRadius = '6px';
+    nav.style.padding = '18px 22px';
+    nav.style.gap = '16px';
+    nav.style.boxShadow = '0 8px 24px rgba(0,0,0,0.08)';
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+  });
+}
+
+const reqBtn = document.getElementById('request-btn');
+const reqSuccess = document.getElementById('request-success');
+if (reqBtn && reqSuccess) {
+  reqBtn.addEventListener('click', () => {
+    reqSuccess.classList.add('show');
+  });
+}
+</script>
+
+</body>
+</html>
